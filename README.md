@@ -1,5 +1,5 @@
 # Pascah-Restaurant-Slot-Booking
-Hello readers😊! 'Pascah' restaurant is famous food🍲 spot in my local area.one day i went to eat🍖 there but it was so rush and need to ask them when will be our turn again & again while waiting in the queue then i got a idea🤔💡 what if we develop application(website) that helps customer to book table slot(should be near the restaurant) online in real time and notify the customer when it's their turn.That how i inspired and developed this application.Hope you will enjoy it. Thank you.
+Hello readers😊! 'Pascah' restaurant is famous food🍲 spot in my local area.one day i went to eat🍖 there but it was so rush and need to ask them when will be our turn again & again while waiting in the queue then i got a idea🤔💡 what if we develop application(website) that helps customer to book table slot(should be near the restaurant) online in real time and notify the customer when it's their turn.That how i inspired and developed this application.
 
 Topics:
   1.Concept Desingn & Fundamentals:
@@ -33,4 +33,4 @@ Topics:
   Testing Api:
     > Test the restframework api
     
-  
+Thank you for reading🤗.
