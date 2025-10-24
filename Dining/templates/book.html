@@ -1,0 +1,21 @@
+{% extends 'Home.html' %}
+{% load static %}
+
+{% block book %}
+<body>
+    <div class="book">
+        <div style="backdrop-filter: blur(1.5px);">
+        <h2 style="padding-top: 10px;">Per Table Four Members Only</h2>
+        <form accept="" class="for" method="post" target="_top">
+            {% csrf_token %}
+            <label for="name">Name</label>
+            <Input type="text" name="name" required></Input>
+            <label for="contact">Contact</label>
+            <Input type="number" name="contact" minlength="10" maxlength="10" required></Input>
+            <input type="submit" onclick="Submitpage()" value="Book" name="" id="">
+            <!-- <button onclick="Submitpage()">Book</button> -->
+        </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

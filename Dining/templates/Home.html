@@ -1,0 +1,85 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'Home.css' %}">
+</head>
+{% block book %}
+<body>
+    <div class="head">
+        <i class="fa fa-navicon" style="color: black; font-size: 30px;align-items: flex-start;"></i>
+         <p id="ref" style="font-size: 10px;color: rgb(255, 255, 255);z-index: 1;"></p>
+    </div>
+    <div class="header">
+        <div class="moto"><pre>
+    Bless the <i>Food</i>
+    Before us the <i>Family</i>
+    Beside us the <i>Love</i>
+    Between us
+        </pre>
+        </div>
+    </div>
+    <hr>
+    <h2> book your slot in real time here! </h2>
+    <div class="section">
+        <div class="section1">
+        <h3>Book Available Slots</h3>
+        <button class="btn" onclick="Bookpage()">Book Now &#8594;</button>
+        </div>
+    </div>
+   <div class="section2">
+        <h2>On Hold Slots</h2>
+            <ol >
+                {% for i in on_holds %}
+            <ls class="slt_ls">
+                <div class="slot">
+                    <p> Table No.{{i.table_no}} On hold by {{i.customer.name}} </p>
+                </div>
+            </ls>
+            {% endfor %}
+        </ol>
+    </div>
+    <div class="section3">
+        <h2>Waiting List</h2>
+        <ol  class="que_ls" >
+            {% for i in queues %}
+            <ls><div class="slt">{{ i.0}}</div></ls>
+            {% endfor %}
+            <!-- <ls><div class="slt">Seenu</div></ls>
+            <ls><div class="slt">Seenu</div></ls> -->
+        </ol>
+    </div>
+    
+</body>
+{% endblock %}
+<script>
+    var a = 60;
+    setInterval(Pageload,1000)
+    setInterval(Pri,1000)
+    function Bookpage() {
+        window.location.href = "{% url 'book' %}";
+    }
+    function Pageload(){
+        a = a - 1;
+        if(a == 0){
+            window.location.reload();
+            a = 60;
+        }
+    }
+    function Pri(){
+        document.getElementById('ref').innerHTML = 'Refresh in: ' + a;
+        console.log(a);
+
+    }
+
+    function Submitpage(){
+        confirm("Succesfully Booked.Visit home for waiting list");
+        // location.replace("{% url 'home' %}");
+        
+    }
+</script>
+</html>
